@@ -133,6 +133,7 @@ typedef struct
     struct
     {
         cfg_entry_t in_flight;
+        cfg_entry_t disable_sound;
         cfg_entry_t sink;
         cfg_entry_t lift;
         cfg_entry_t acc_gain;

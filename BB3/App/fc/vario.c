@@ -337,7 +337,7 @@ void vario_step()
     fc.autostart.wait_for_manual_change = false;
 
     int16_t ivario = vario * 10;
-    if (config_get_bool(&profile.vario.in_flight) && fc.flight.mode != flight_flight)
+    if (config_get_bool(&profile.vario.disable_sound) || (config_get_bool(&profile.vario.in_flight) && fc.flight.mode != flight_flight))
     {
     	vario_silent();
     }

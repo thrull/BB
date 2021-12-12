@@ -308,6 +308,8 @@ flight_profile_t profile =
     {
 		//in_flight
 		entry_bool("vario_in_flight", true),
+    	//disable sound
+    	entry_bool("vario_disable_sound", false),
 		//sink
 		entry_int("vario_sink", -5, -100, 100),
 		//lift
