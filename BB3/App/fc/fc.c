@@ -22,6 +22,7 @@
 #include "fc/agl.h"
 #include "fc/navigation.h"
 #include "fc/circling.h"
+#include "fc/wind.h"
 
 #include "gui/tasks/page/pages.h"
 
@@ -272,6 +273,7 @@ void fc_step()
 	navigation_step();
 	circling_step();
 	agl_step();
+	wind_step();
 }
 
 void fc_device_status(char * buff, fc_device_status_t status)

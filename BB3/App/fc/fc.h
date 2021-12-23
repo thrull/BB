@@ -54,6 +54,8 @@
 #define ESP_STATE_BT_SPP            0b01000000
 #define ESP_STATE_BT_BLE            0b10000000
 
+#define WIND_NUM_OF_SECTORS 8
+
 typedef struct
 {
 	uint8_t manufacturer_id;
@@ -173,6 +175,7 @@ typedef enum
 #define FC_GNSS_NEW_SAMPLE_CIRCLE   	0b00000001
 #define FC_GNSS_NEW_SAMPLE_TELEMETRY	0b00000010
 #define FC_GNSS_NEW_SAMPLE_NAVIGATION	0b00000100
+#define FC_GNSS_NEW_SAMPLE_WIND			0b00001000
 
 #define VARIO_CIRCLING_HISTORY_SCALE    12 // == 1m/s
 #define PAGE_AUTOSET_CIRCLING_THOLD     6
@@ -386,6 +389,23 @@ typedef struct
 		int16_t ground_height;
 		int16_t agl;
 	} agl;
+
+	struct
+	{
+		float dir[WIND_NUM_OF_SECTORS];
+		float spd[WIND_NUM_OF_SECTORS];
+		//	vector_2d_t old_gps;	//GPS position input mode only
+		uint8_t old_sector;
+		int8_t sectors_cnt;
+
+		//calculated wind values
+		bool valid;		// was wind calculated?
+		uint32_t valid_from;
+
+		float 		speed;		// m/s
+		float 		direction;	// degrees
+		uint8_t _pad[1];
+	} wind;
 } fc_t;
 
 extern fc_t fc;

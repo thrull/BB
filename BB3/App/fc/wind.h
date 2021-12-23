@@ -9,7 +9,6 @@
 #define WIND_H_
 
 #include "../common.h"
-#include "../debug.h"
 
 #define WIND_NUM_OF_SECTORS 8
 
