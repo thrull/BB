@@ -178,6 +178,8 @@ extern osThreadId_t SystemHandle;
 #define PATH_PILOT_DIR      PATH_CONFIG_DIR "/pilots"
 #define PATH_PAGES_DIR      PATH_CONFIG_DIR "/pages"
 #define PATH_NETWORK_DB     PATH_CONFIG_DIR "/networks.cfg"
+#define PATH_WAYPOINTS_DIR  PATH_CONFIG_DIR "/waypoints"
+#define PATH_TASKS_DIR  	PATH_CONFIG_DIR "/tasks"
 
 #define PATH_SCREENSHOT     "scrshot"
 

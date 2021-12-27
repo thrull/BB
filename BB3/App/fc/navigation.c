@@ -38,6 +38,30 @@ void navigation_takeoff_distance_and_bearing()
 }
 
 /**
+ * Update task calculations & status
+ */
+
+void competition_task_step()
+{
+	// if task active
+	// calculate if it started (time)
+
+	// calculate distance to next turnpoint
+	// calculate GR to next turnpoint
+	// calculate heading to next turnpoint
+	// calculate GR to GOAL
+	// calculate alt over GOAL
+	// calculate GR to NEXT
+	// task time
+
+	// before task start
+	// calculate time to start
+	// distance to START cylinder (in/out)
+	//
+
+}
+
+/**
  * Regularly called to do navigation work.
  */
 void navigation_step()
