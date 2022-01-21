@@ -379,8 +379,9 @@ typedef struct
 	struct
 	{
 		fc_logger_status_t igc;
+		fc_logger_status_t csv;
 
-		uint8_t _pad[3];
+		uint8_t _pad[2];
 	} logger;
 
 
